@@ -49,7 +49,7 @@ public class ServerConfigurationTest
 	{
 		try 
 		{
-			_main = ServerConfiguration.getInstance("198.168.1.254", 2225, "liu.com", true);
+			_main = ServerConfiguration.getInstance("198.168.1.254", 2225, "somenet.com", true);
 		} 
 		catch (Exception e) 
 		{
@@ -62,7 +62,7 @@ public class ServerConfigurationTest
 	{
 		assertEquals("IP Matches 198.168.1.254", "198.168.1.254", _main.getIp() );
 		assertEquals("Port Matcher 2225", 2225, _main.getPort() );
-		assertEquals("Domain Matches liu.com","liu.com", _main.getDomain());
+		assertEquals("Domain Matches liu.com","somenet.com", _main.getDomain());
 	}
 	
 	@Test
@@ -77,7 +77,7 @@ public class ServerConfigurationTest
 			
 			assertEquals("IP Matches 192.168.0.1", "192.168.0.1", _ip);
 			assertEquals("Port Matches 2221", 2221, _port);
-			assertEquals("Domain Matcher oracle.com","oracle.com", _domain);
+			assertEquals("Domain Matcher oracle.com","somenet.com", _domain);
 		}
 		catch (Exception e)
 		{

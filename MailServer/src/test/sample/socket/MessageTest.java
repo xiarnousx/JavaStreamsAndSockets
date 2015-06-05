@@ -65,9 +65,9 @@ public class MessageTest
 	public void testSend()
 	{
 		Email e = new Email();
-		e.To = "test@oracle.com";
-		e.From = "test-from@oracle.com";
-		e.CC = "test-cc@oracle.com";
+		e.To = "test@somenet.com";
+		e.From = "test-from@somenet.com";
+		e.CC = "test-cc@somenet.com";
 		e.Subject = "Hello";
 		e.Message = "World!";
 		

@@ -86,7 +86,7 @@ public class MailBoxTest
 			 {
 				 oin.close();
 			 }
-			assertEquals("email shld be test@oracle.com", "test@oracle.com", emailRead.To);
+			assertEquals("email shld be test@oracle.com", "test@somenet.com", emailRead.To);
 			assertEquals("subject shld be Hello", "Hello", emailRead.Subject);
 			assertEquals("message shld be World", "World", emailRead.Message);
 			

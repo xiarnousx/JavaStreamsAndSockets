@@ -80,9 +80,9 @@ public class ServerTest
 	public void testSendEmail()
 	{
 		Email email = new Email();
-		email.To = "test@oracle.com";
-		email.From = "test-from@oracle.com";
-		email.CC = "test-cc@oracle.com";
+		email.To = "test@somenet.com";
+		email.From = "test-from@somenet.com";
+		email.CC = "test-cc@somenet.com";
 		email.Subject = "Hello";
 		email.Message = "World";
 		
@@ -146,6 +146,8 @@ public class ServerTest
 			if (obj instanceof SyncInbox)
 			{
 				SyncInbox mail = (SyncInbox) obj;
+				// this should be changed to be read dynamically
+				// or manualy depends on inbox number of files
 				assertEquals("shld be 6", 6, ((ArrayList<Email>)mail.inbox.get(SyncInbox.INBOX_KEY)).size() );
 				assertEquals("shld be 0", 0, ((ArrayList<Email>)mail.inbox.get(SyncInbox.SENT_KEY)).size() );
 			}
